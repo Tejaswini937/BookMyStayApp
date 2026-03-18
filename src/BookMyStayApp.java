@@ -1,29 +1,6 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-<<<<<<< HEAD
-class RoomInventory {
-
-    private Map<String, Integer> roomAvailability;
-
-    public RoomInventory() {
-        roomAvailability = new HashMap<>();
-        initializeInventory();
-    }
-
-    private void initializeInventory() {
-        roomAvailability.put("Single", 5);
-        roomAvailability.put("Double", 3);
-        roomAvailability.put("Suite", 2);
-    }
-
-    public Map<String, Integer> getRoomAvailability() {
-        return roomAvailability;
-    }
-
-    public void updateAvailability(String roomType, int count) {
-        roomAvailability.put(roomType, count);
-=======
 class Reservation {
 
     private String guestName;
@@ -61,7 +38,6 @@ class BookingRequestQueue {
 
     public boolean hasPendingRequests() {
         return !requestQueue.isEmpty();
->>>>>>> feature/UC5
     }
 }
 
@@ -69,22 +45,6 @@ public class BookMyStayApp {
 
     public static void main(String[] args) {
 
-<<<<<<< HEAD
-        RoomInventory inventory = new RoomInventory();
-
-        Map<String, Integer> availability = inventory.getRoomAvailability();
-
-        System.out.println("Hotel Room Inventory Status\n");
-
-        System.out.println("Single Room:");
-        System.out.println("Available Rooms: " + availability.get("Single") + "\n");
-
-        System.out.println("Double Room:");
-        System.out.println("Available Rooms: " + availability.get("Double") + "\n");
-
-        System.out.println("Suite Room:");
-        System.out.println("Available Rooms: " + availability.get("Suite"));
-=======
         System.out.println("Booking Request Queue\n");
 
         BookingRequestQueue queue = new BookingRequestQueue();
@@ -103,6 +63,5 @@ public class BookMyStayApp {
             System.out.println("Guest: " + r.getGuestName());
             System.out.println("Room Type: " + r.getRoomType() + "\n");
         }
->>>>>>> feature/UC5
     }
 }
