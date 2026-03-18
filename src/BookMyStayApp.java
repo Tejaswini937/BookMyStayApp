@@ -1,6 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
+<<<<<<< HEAD
 class Room {
     int beds;
     int size;
@@ -59,6 +60,29 @@ class RoomSearchService {
             System.out.println("Price per night: " + suite.price);
             System.out.println("Available Rooms: " + availability.get("Suite"));
         }
+=======
+class RoomInventory {
+
+    private Map<String, Integer> roomAvailability;
+
+    public RoomInventory() {
+        roomAvailability = new HashMap<>();
+        initializeInventory();
+    }
+
+    private void initializeInventory() {
+        roomAvailability.put("Single", 5);
+        roomAvailability.put("Double", 3);
+        roomAvailability.put("Suite", 2);
+    }
+
+    public Map<String, Integer> getRoomAvailability() {
+        return roomAvailability;
+    }
+
+    public void updateAvailability(String roomType, int count) {
+        roomAvailability.put(roomType, count);
+>>>>>>> feature/UC3
     }
 }
 
@@ -66,6 +90,7 @@ public class BookMyStayApp {
 
     public static void main(String[] args) {
 
+<<<<<<< HEAD
         Room single = new Room(1, 250, 1500.0);
         Room doubleRoom = new Room(2, 400, 2500.0);
         Room suite = new Room(3, 750, 5000.0);
@@ -77,3 +102,21 @@ public class BookMyStayApp {
     }
 }
 
+=======
+        RoomInventory inventory = new RoomInventory();
+
+        Map<String, Integer> availability = inventory.getRoomAvailability();
+
+        System.out.println("Hotel Room Inventory Status\n");
+
+        System.out.println("Single Room:");
+        System.out.println("Available Rooms: " + availability.get("Single") + "\n");
+
+        System.out.println("Double Room:");
+        System.out.println("Available Rooms: " + availability.get("Double") + "\n");
+
+        System.out.println("Suite Room:");
+        System.out.println("Available Rooms: " + availability.get("Suite"));
+    }
+}
+>>>>>>> feature/UC3
